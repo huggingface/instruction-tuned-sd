@@ -15,8 +15,10 @@ def load_model(model_id="sayakpaul/whitebox-cartoonizer"):
     return concrete_func
 
 
-def perform_inference(concrete_fn: Callable, image: np.ndarray) -> Image.Image:
-    preprocessed_image = image_utils.preprocess_image(image)
-    result = concrete_fn(preprocessed_image)["final_output:0"]
-    output_image = image_utils.postprocess_image(result)
-    return output_image
+def perform_inference(concrete_fn: Callable) -> Callable:
+    def fn(image: np.ndarray) -> Image.Image:
+        preprocessed_image = image_utils.preprocess_image(image)
+        result = concrete_fn(preprocessed_image)["final_output:0"]
+        output_image = image_utils.postprocess_image(result)
+        return output_image
+    return fn
