@@ -856,7 +856,7 @@ def main():
     # We need to initialize the trackers we use, and also store our configuration.
     # The trackers initializes automatically on the main process.
     if accelerator.is_main_process:
-        accelerator.init_trackers("instruct-pix2pix", config=vars(args))
+        accelerator.init_trackers("instruct-pix2pix-cartoonizer", config=vars(args))
 
     # Train!
     total_batch_size = (
