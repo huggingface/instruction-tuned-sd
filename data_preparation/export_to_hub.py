@@ -12,7 +12,7 @@ DS_NAME = "cartoonizer-dataset"
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_root", type=str)
+    parser.add_argument("--data_root", type=str, default="cartoonizer-dataset")
     parser.add_argument("--instructions_path", type=str, default="instructions.txt")
     args = parser.parse_args()
     return args
