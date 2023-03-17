@@ -1,0 +1,6 @@
+tensorflow
+tensorflow_datasets==4.6.0
+datasets 
+huggingface_hub
+numpy
+Pillow
