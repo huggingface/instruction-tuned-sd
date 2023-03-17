@@ -112,13 +112,13 @@ def parse_args():
     parser.add_argument(
         "--original_image_column",
         type=str,
-        default="input_image",
+        default="original_image",
         help="The column of the dataset containing the original image on which edits where made.",
     )
     parser.add_argument(
         "--edited_image_column",
         type=str,
-        default="edited_image",
+        default="cartoonized_image",
         help="The column of the dataset containing the edited image.",
     )
     parser.add_argument(
