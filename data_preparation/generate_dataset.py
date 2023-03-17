@@ -79,7 +79,7 @@ def main(args):
         cartoonized_image = Image.from_array(cartoonized_image).convert("RGB")
         cartoonized_image.save(os.path.join(sample_dir, "cartoonized_image.png"))
 
-
+    print(f"Total generated image-pairs: {len(os.listdir(args.data_root))}.")
     # print("Creating dataset...")
     # hub_ds = Dataset.from_generator(
     #     generator_fn,
