@@ -76,9 +76,9 @@ def main(args):
         sample_dir = os.path.join(args.data_root, hash_image)
         os.makedirs(sample_dir)
 
-        original_image = Image.from_array(original_image).convert("RGB")
+        original_image = Image.fromarray(original_image).convert("RGB")
         original_image.save(os.path.join(sample_dir, "original_image.png"))
-        cartoonized_image = Image.from_array(cartoonized_image).convert("RGB")
+        cartoonized_image = Image.fromarray(cartoonized_image).convert("RGB")
         cartoonized_image.save(os.path.join(sample_dir, "cartoonized_image.png"))
 
     print(f"Total generated image-pairs: {len(os.listdir(args.data_root))}.")
