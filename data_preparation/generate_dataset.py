@@ -1,9 +1,11 @@
 import argparse
-from PIL import Image
-import model_utils
-import tensorflow_datasets as tfds
 import hashlib
 import os
+
+import model_utils
+import tensorflow_datasets as tfds
+from PIL import Image
+from tqdm import tqdm
 
 
 def parse_args():
@@ -66,7 +68,7 @@ def main(args):
 
     print("Preparing the image pairs...")
     os.makedirs(args.data_root, exist_ok=True)
-    for sample in dataset.as_numpy_iterator():
+    for sample in tqdm(dataset.as_numpy_iterator()):
         original_image = sample["image"]
         cartoonized_image = inference_fn(original_image)
 
