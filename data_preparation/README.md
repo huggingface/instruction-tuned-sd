@@ -24,7 +24,7 @@ python generate_dataset.py
 If you want to use more than 5000 samples, specify the `--max_num_samples` option. One the image-cartoon pairs are generated, you should see a directory called `cartoonizer-dataset` directory (unless you specified a different one via `--data_root`): 
 
 <p align="center">
-<img src="https://i.imgur.com/jHaAPWa.png"/>
+<img src="https://i.imgur.com/jHaAPWa.png" width=500/>
 </p>
 
 ### Step 2: Export the dataset to 🤗 Hub
@@ -44,5 +44,5 @@ python export_to_hub.py
 You can find a mini dataset [here](https://huggingface.co/datasets/sayakpaul/cartoonizer-dataset):
 
 <p align="center">
-<img src="https://i.imgur.com/QncO0BQ.png"/>
+<img src="https://i.imgur.com/QncO0BQ.png" width=500/>
 </p>
