@@ -4,3 +4,4 @@ datasets
 huggingface_hub
 numpy
 Pillow
+opencv-python

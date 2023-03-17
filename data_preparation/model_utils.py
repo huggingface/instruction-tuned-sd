@@ -20,5 +20,4 @@ def perform_inference(concrete_fn: Callable) -> Callable:
         result = concrete_fn(preprocessed_image)["final_output:0"]
         output_image = image_utils.postprocess_image(result)
         return output_image
-
     return fn

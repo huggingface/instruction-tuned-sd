@@ -37,7 +37,7 @@ def preprocess_image(image: np.ndarray) -> tf.Tensor:
 
 
 def postprocess_image(image: tf.Tensor) -> Image.Image:
-    output = (image.numpy() + 1.0) * 127.5
+    output = (image[0].numpy() + 1.0) * 127.5
     output = np.clip(output, 0, 255).astype(np.uint8)
     output = cv2.cvtColor(output, cv2.COLOR_BGR2RGB)
     output_image = Image.fromarray(output)
