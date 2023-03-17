@@ -3,7 +3,6 @@ from typing import Callable
 import image_utils
 import numpy as np
 import tensorflow as tf
-import tensorflow_datasets as tfds
 from huggingface_hub import snapshot_download
 from PIL import Image
 
