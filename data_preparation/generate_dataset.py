@@ -78,7 +78,6 @@ def main(args):
 
         original_image = Image.fromarray(original_image).convert("RGB")
         original_image.save(os.path.join(sample_dir, "original_image.png"))
-        cartoonized_image = Image.fromarray(cartoonized_image).convert("RGB")
         cartoonized_image.save(os.path.join(sample_dir, "cartoonized_image.png"))
 
     print(f"Total generated image-pairs: {len(os.listdir(args.data_root))}.")
