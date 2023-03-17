@@ -1,20 +1,22 @@
 import argparse
-import tensorflow_datasets as tfds
+from typing import Callable, List
+
+import model_utils
+import numpy as np
 import tensorflow as tf
+import tensorflow_datasets as tfds
 from datasets import Dataset, Features
 from datasets import Image as ImageFeature
 from datasets import Value
-
-import model_utils
-from typing import Callable, List
-import numpy as np
 
 
 def parse_args():
     parser = argparse.ArgumentParser(
         description="Prepare a dataset for InstructPix2Pix style training."
     )
-    parser.add_argument("--model_id", type=str, default="sayakpaul/whitebox-cartoonizer")
+    parser.add_argument(
+        "--model_id", type=str, default="sayakpaul/whitebox-cartoonizer"
+    )
     parser.add_argument("--dataset_id", type=str, default="imagenette")
     parser.add_argument("--instructions_path", type=str, default="instructions.txt")
     parser.add_argument("--max_num_samples", type=int, default=5000)
@@ -22,12 +24,15 @@ def parse_args():
     args = parser.parse_args()
     return args
 
+
 def load_dataset(max_num_samples=None):
     dataset = tfds.load("imagenette", split="train")
     dataset = dataset.shuffle(max_num_samples)
-    if max_num_samples is not None: 
+    if max_num_samples is not None:
+        print(f"Dataset will be restricted to {max_num_samples} samples.")
         dataset = dataset.take(max_num_samples)
     return dataset
+
 
 def load_instructions(instructions_path: str) -> List[str]:
     with open(instructions_path, "r") as f:
@@ -36,12 +41,15 @@ def load_instructions(instructions_path: str) -> List[str]:
     return instructions
 
 
-
-def gen_examples(dataset: tf.data.Dataset, instructions: List[str], concrete_fn: Callable):
+def gen_examples(
+    dataset: tf.data.Dataset, instructions: List[str], concrete_fn: Callable
+):
     def fn():
         for sample in dataset.as_numpy_iterator():
             original_image = sample["image"]
-            cartoonized_image = model_utils.perform_inference(concrete_fn, original_image)
+            cartoonized_image = model_utils.perform_inference(
+                concrete_fn, original_image
+            )
             yield {
                 "original_image": original_image,
                 "edit_prompt": np.random.choice(instructions),
@@ -52,6 +60,7 @@ def gen_examples(dataset: tf.data.Dataset, instructions: List[str], concrete_fn:
 
 
 def main(args):
+    print("Loading initial dataset and the Cartoonizer model...")
     dataset = load_dataset(args.max_num_samples)
     instructions = load_instructions(args.instructions_path)
     concrete_fn = model_utils.load_model(args.model_id)

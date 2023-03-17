@@ -4,7 +4,8 @@ import requests
 import tensorflow as tf
 from PIL import Image
 
-# Taken from 
+
+# Taken from
 # https://github.com/SystemErrorWang/White-box-Cartoonization/blob/master/test_code/cartoonize.py#L11
 def resize_crop(image: np.ndarray) -> np.ndarray:
     h, w, c = np.shape(image)
@@ -33,6 +34,7 @@ def preprocess_image(image: np.ndarray) -> tf.Tensor:
     image = np.expand_dims(image, axis=0)
     image = tf.constant(image)
     return image
+
 
 def postprocess_image(image: tf.Tensor) -> Image.Image:
     output = (image.numpy() + 1.0) * 127.5
