@@ -12,7 +12,7 @@ import numpy as np
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Prepare a mini dataset fro InstructPix2Pix style training."
+        description="Prepare a dataset for InstructPix2Pix style training."
     )
     parser.add_argument("--model_id", type=str, default="sayakpaul/whitebox-cartoonizer")
     parser.add_argument("--dataset_id", type=str, default="imagenette")
