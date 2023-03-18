@@ -26,8 +26,11 @@ accelerate launch --mixed_precision="fp16" finetune_instruct_pix2pix.py \
 
 ```bash
 python cartoonize.py \
-    --image_path https://hf.co/datasets/diffusers/diffusers-images-docs/resolve/main/mountain.png
+    --image_path https://hf.co/datasets/diffusers/diffusers-images-docs/resolve/main/mountain.png \
+    --concept mountain
 ```
+
+By default [`instruction-tuning-vision/instruction-tuned-cartoonizer`](https://hf.co/instruction-tuning-vision/instruction-tuned-cartoonizer) model will be used.
 
 ## Organization to keep track of the artifacts (datasets, models, etc.)
 
