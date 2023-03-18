@@ -5,6 +5,7 @@ import torch
 from diffusers import StableDiffusionInstructPix2PixPipeline
 from diffusers.utils import load_image
 
+GEN = torch.manual_seed(0)
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -54,6 +55,7 @@ def main(args):
         image_guidance_scale=args.image_guidance_scale,
         guidance_scale=args.guidance_scale,
         num_images_per_prompt=args.num_images_per_prompt,
+        generator=GEN,
     ).images
 
     print(f"Serializing images to {os.path.join(args.model_id, args.concept)}...")
