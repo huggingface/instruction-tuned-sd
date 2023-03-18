@@ -55,6 +55,8 @@ def main(args):
         guidance_scale=args.guidance_scale,
         num_images_per_prompt=args.num_images_per_prompt,
     ).images
+
+    print(f"Serializing images to {os.path.join(args.model_id, args.concept)}...")
     image_prefix = f"steps@{args.num_inference_steps}-igs@{args.image_guidance_scale}-gs@{args.guidance_scale}"
     os.makedirs(os.path.join(args.model_id, image_prefix), exist_ok=True)
     for i, image in enumerate(images):
