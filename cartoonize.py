@@ -60,7 +60,9 @@ def main(args):
     image_prefix = f"steps@{args.num_inference_steps}-igs@{args.image_guidance_scale}-gs@{args.guidance_scale}"
     os.makedirs(os.path.join(args.model_id, image_prefix), exist_ok=True)
     for i, image in enumerate(images):
-        image_path = os.path.join(args.model_id, image_prefix, f"_{i}.png")
+        image_path = os.path.join(
+            args.model_id, args.concept, image_prefix, f"_{i}.png"
+        )
         image.save(image_path)
 
 
