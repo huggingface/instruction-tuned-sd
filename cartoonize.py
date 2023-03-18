@@ -30,6 +30,10 @@ def main(args):
     images = pipeline(args.prompt, image=image, num_inference_steps=args.num_inference_steps, image_guidance_scale=args.image_guidance_scale, guidance_scale=args.guidance_scale, num_images_per_prompt=args.num_images_per_prompt).images
     image_prefix = f"steps@{args.num_inference_steps}-igs@{args.image_guidance_scale}-gs@{args.guidance_scale}"
     for i, image in enumerate(images): 
-        image_filename = image_prefix + "_{i}.png"
+        image_filename = image_prefix + f"_{i}.png"
         image.save(image_filename)
 
+
+if __name__ == "__main__":
+    args = parse_args()
+    main(args)
