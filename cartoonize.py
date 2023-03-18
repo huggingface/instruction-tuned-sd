@@ -27,7 +27,7 @@ def parse_args():
 
 def load_pipeline(model_id):
     pipeline = StableDiffusionInstructPix2PixPipeline.from_pretrained(
-        model_id, torch_dtype=torch.float16, use_auth_token=True
+        model_id, torch_dtype=torch.float16
     ).to("cuda")
     pipeline.enable_xformers_memory_efficient_attention()
     return pipeline
@@ -50,7 +50,7 @@ def main(args):
     image_prefix = f"steps@{args.num_inference_steps}-igs@{args.image_guidance_scale}-gs@{args.guidance_scale}"
     os.makedirs(os.path.join(args.args.model_id, image_prefix), exist_ok=True)
     for i, image in enumerate(images):
-        image_path = os.path.join(args.args.model_id, image_prefix, f"_{i}.png")
+        image_path = os.path.join(args.model_id, image_prefix, f"_{i}.png")
         image.save(image_path)
 
 
