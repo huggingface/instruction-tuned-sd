@@ -19,7 +19,7 @@ def parse_args():
     return args
 
 def load_pipeline(model_id):
-    pipeline = StableDiffusionInstructPix2PixPipeline.from_pretrained(model_id, torch_dtype=torch.float16).to("cuda")
+    pipeline = StableDiffusionInstructPix2PixPipeline.from_pretrained(model_id, torch_dtype=torch.float16, use_auth_token=True).to("cuda")
     pipeline.enable_xformers_memory_efficient_attention()
     return pipeline
 
