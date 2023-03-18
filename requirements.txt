@@ -1,0 +1,9 @@
+torch
+torchvision
+accelerate
+diffusers
+transformers
+xformers
+numpy
+datasets
+wandb

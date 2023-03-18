@@ -41,7 +41,7 @@ Then run:
 python export_to_hub.py
 ```
 
-You can find a mini dataset [here](https://huggingface.co/datasets/sayakpaul/cartoonizer-dataset):
+You can find a mini dataset [here](https://huggingface.co/datasets/instruction-tuning-vision/cartoonizer-dataset):
 
 <p align="center">
 <img src="https://i.imgur.com/QncO0BQ.png" width=500/>
