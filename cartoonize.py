@@ -7,6 +7,7 @@ from diffusers.utils import load_image
 
 GEN = torch.manual_seed(0)
 
+
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -43,7 +44,8 @@ def load_pipeline(model_id):
 
 
 def main(args):
-    os.makedirs(os.path.join(args.model_id, args.concept), exist_ok=True)
+    data_root = os.path.join(f"local-{args.model_id}", args.concept)
+    os.makedirs(data_root, exist_ok=True)
     pipeline = load_pipeline(args.model_id)
     image = load_image(args.image_path)
 
@@ -58,13 +60,11 @@ def main(args):
         generator=GEN,
     ).images
 
-    print(f"Serializing images to {os.path.join(args.model_id, args.concept)}...")
+    print(f"Serializing images to {data_root}...")
     image_prefix = f"steps@{args.num_inference_steps}-igs@{args.image_guidance_scale}-gs@{args.guidance_scale}"
-    os.makedirs(os.path.join(args.model_id, args.concept, image_prefix), exist_ok=True)
+    os.makedirs(os.path.join(data_root, image_prefix), exist_ok=True)
     for i, image in enumerate(images):
-        image_path = os.path.join(
-            args.model_id, args.concept, image_prefix, f"{args.concept}_{i}.png"
-        )
+        image_path = os.path.join(data_root, image_prefix, f"{args.concept}_{i}.png")
         image.save(image_path)
 
 
