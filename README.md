@@ -29,8 +29,6 @@ python cartoonize.py \
     --image_path https://hf.co/datasets/diffusers/diffusers-images-docs/resolve/main/mountain.png
 ```
 
-By default [`instruction-tuning-vision/instruction-tuned-cartoonizer`](https://huggingface.co/instruction-tuning-vision/instruction-tuned-cartoonizer) model will be used.
-
 ## Organization to keep track of the artifacts (datasets, models, etc.)
 
 https://huggingface.co/instruction-tuning-vision
