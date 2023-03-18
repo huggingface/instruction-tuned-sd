@@ -13,7 +13,15 @@ def parse_args():
         type=str,
         default="instruction-tuning-vision/instruction-tuned-cartoonizer",
     )
-    parser.add_argument("--image_path", type=str, help="Can be a URL or a local path.")
+    parser.add_argument(
+        "--image_path", type=str, required=True, help="Can be a URL or a local path."
+    )
+    parser.add_argument(
+        "--concept",
+        type=str,
+        required=True,
+        help="Name of the concept underlying the image. Helpful for structured serialization of the results.",
+    )
     parser.add_argument(
         "--prompt", type=str, default="Generate a cartoonized version of the image"
     )
@@ -34,7 +42,7 @@ def load_pipeline(model_id):
 
 
 def main(args):
-    os.makedirs(args.model_id, exist_ok=True)
+    os.makedirs(os.path.join(args.model_id, args.concept), exist_ok=True)
     pipeline = load_pipeline(args.model_id)
     image = load_image(args.image_path)
 
