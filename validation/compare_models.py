@@ -25,7 +25,7 @@ def parse_args():
         ],
     )
     parser.add_argument("--dataset_id", type=str, default="imagenette")
-    parser.add_argument("--max_num_samples", type=int, default=5000)
+    parser.add_argument("--max_num_samples", type=int, default=10)
     parser.add_argument(
         "--prompt", type=str, default="Generate a cartoonized version of the image"
     )

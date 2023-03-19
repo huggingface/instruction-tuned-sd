@@ -2,6 +2,10 @@
 
 Code for instruction-tuned cartoonization with Diffusion models.
 
+## Data preparation
+
+Refer to the `data_preparation` directory.
+
 ## Command for launching training
 
 ```bash
@@ -30,7 +34,11 @@ python cartoonize.py \
     --concept mountain
 ```
 
-By default [`instruction-tuning-vision/instruction-tuned-cartoonizer`](https://hf.co/instruction-tuning-vision/instruction-tuned-cartoonizer) model will be used.
+By default [`instruction-tuning-vision/instruction-tuned-cartoonizer`](https://hf.co/instruction-tuning-vision/instruction-tuned-cartoonizer) model will be used. You can also set `model_id` to be `timbrooks/instruct-pix2pix` to use a pre-trained InstructPix2Pix model.
+
+## Comparison across models
+
+Refer to the `validation` directory.
 
 ## Organization to keep track of the artifacts (datasets, models, etc.)
 
