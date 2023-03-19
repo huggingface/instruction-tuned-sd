@@ -74,7 +74,7 @@ def main(args):
     print(f"Generating {num_samples_to_generate} images...")
     for sample in dataset.as_numpy_iterator():
         # Result dir creation.
-        concept_path = os.path.join(data_root, int(sample["label"]))
+        concept_path = os.path.join(data_root, str(sample["label"]))
         hash_image = hashlib.sha1(sample["image"].tobytes()).hexdigest()
         image_path = os.path.join(concept_path, hash_image)
         os.makedirs(image_path, exist_ok=True)
