@@ -1,10 +1,17 @@
+import os
+import sys
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.dirname(SCRIPT_DIR))
+
 from typing import Callable
 
-import image_utils
 import numpy as np
 import tensorflow as tf
 from huggingface_hub import snapshot_download
 from PIL import Image
+
+from . import image_utils
 
 
 def load_model(model_id="sayakpaul/whitebox-cartoonizer"):

@@ -3,6 +3,7 @@ import hashlib
 import os
 
 import model_utils
+import tensorflow as tf
 import tensorflow_datasets as tfds
 from PIL import Image
 from tqdm import tqdm
@@ -22,9 +23,9 @@ def parse_args():
     return args
 
 
-def load_dataset(dataset_id, max_num_samples):
+def load_dataset(dataset_id: str, max_num_samples: int) -> tf.data.Dataset:
     dataset = tfds.load(dataset_id, split="train")
-    dataset = dataset.shuffle(max_num_samples)
+    dataset = dataset.shuffle(max_num_samples if max_num_samples is not None else 128)
     if max_num_samples is not None:
         print(f"Dataset will be restricted to {max_num_samples} samples.")
         dataset = dataset.take(max_num_samples)
