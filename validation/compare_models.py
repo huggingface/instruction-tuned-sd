@@ -8,12 +8,12 @@ import argparse
 import hashlib
 import os
 
+import data_utils
 import torch
-from data_preparation import model_utils
 from diffusers import StableDiffusionInstructPix2PixPipeline
 from PIL import Image
 
-import data_utils
+from data_preparation import model_utils
 
 GEN = torch.manual_seed(0)
 
