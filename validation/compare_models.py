@@ -81,7 +81,7 @@ def main(args):
 
         # Perform inference and serialize the result.
         if using_tf:
-            image = model_utils.perform_inference(sample["image"])
+            image = model_utils.perform_inference(inference)(sample["image"])
             image.save(os.path.join(image_path, "tf_image.png"))
         else:
             image = inference(
