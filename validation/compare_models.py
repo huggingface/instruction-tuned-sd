@@ -7,7 +7,7 @@ import torch
 from diffusers import StableDiffusionInstructPix2PixPipeline
 from PIL import Image
 
-from ..data_preparation import model_utils
+import model_utils
 
 GEN = torch.manual_seed(0)
 
