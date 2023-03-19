@@ -1,13 +1,19 @@
+import os
+import sys
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.dirname(SCRIPT_DIR))
+
 import argparse
 import hashlib
 import os
 
-import data_utils
 import torch
+from data_preparation import model_utils
 from diffusers import StableDiffusionInstructPix2PixPipeline
 from PIL import Image
 
-import model_utils
+import data_utils
 
 GEN = torch.manual_seed(0)
 
