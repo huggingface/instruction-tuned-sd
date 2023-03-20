@@ -82,6 +82,7 @@ def main(args):
         # Perform inference and serialize the result.
         if using_tf:
             image = model_utils.perform_inference(inference)(sample["image"])
+            Image.fromarray(sample["image"]).save(os.path.join(image_path, "original.png"))
             image.save(os.path.join(image_path, "tf_image.png"))
         else:
             image = inference(
@@ -93,6 +94,7 @@ def main(args):
                 generator=GEN,
             ).images[0]
             image_prefix = f"steps@{args.num_inference_steps}-igs@{args.image_guidance_scale}-gs@{args.guidance_scale}"
+            Image.fromarray(sample["image"]).save(os.path.join(image_path, "original.png"))
             image.save(os.path.join(image_path, f"{image_prefix}.png"))
 
 
