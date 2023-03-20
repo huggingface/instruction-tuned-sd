@@ -654,6 +654,7 @@ def main():
             args.dataset_name,
             args.dataset_config_name,
             cache_dir=args.cache_dir,
+            use_auth_token=True,
         )
     else:
         data_files = {}
