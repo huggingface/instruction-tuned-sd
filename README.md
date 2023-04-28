@@ -88,7 +88,7 @@ Here are some results:
 </p>
 
 <p align="center">
-<img src="https://imgur.com/lNR7mOD"/>
+<img src="https://i.imgur.com/lNR7mOD.png"/>
 </p>
 
 
