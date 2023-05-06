@@ -23,7 +23,7 @@ After the samples have been generated, they should be serialized in the followin
 ├── comparison-sayakpaul
 │   └── whitebox-cartoonizer
 │       ├── 0 -- class label 
-│       │   └── 55f8f5846192691faa2f603b0c92f27fd8599fc7 -- original imahe hash
+│       │   └── 55f8f5846192691faa2f603b0c92f27fd8599fc7 -- original image hash
 │       │       └── tf_image.png -- cartoonized image
 │       ├── 1
 │       │   ├── b8bfb2ec1a9af348ade8f467ac99e0af0fa0e937
