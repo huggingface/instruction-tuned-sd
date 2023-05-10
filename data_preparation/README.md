@@ -5,7 +5,7 @@ This directory provides utilities to create a Cartoonizer dataset for [InstructP
 We used 5000 randomly sampled images as the original images from the `train` set of [ImageNette](https://www.tensorflow.org/datasets/catalog/imagenette). To derive their
 cartoonized renditions, we used the [Whitebox Cartoonizer model](https://huggingface.co/sayakpaul/whitebox-cartoonizer). For deriving the `instructions.txt` file, we used [ChatGPT](https://chat.openai.com/). In particular, we used the following prompt: 
 
-> Provide al teast 50 synonymous sentences for the following instruction: "Cartoonize the natural image."
+> Provide al teast 50 synonymous sentences for the following instruction: "Cartoonize the following image."
 
 Dataset preparation is divided into three steps:
 
