@@ -6,13 +6,13 @@ You can check out [our blog post] (TODO) to know more details.
 
 ## Table of contents
 
-🐶 [Motivation](#motivation)
-📷 [Data preparation](#data-preparation)
-💺 [Training](#training)
-🎛 [Models, datasets, demo](#models-datasets-demo)
-⭐️ [Inference](#inference) 
-🧭 [Results](#results)
-🤝 [Acknowledgements](#acknowledgements)
+🐶 [Motivation](#motivation) <br>
+📷 [Data preparation](#data-preparation) <br>
+💺 [Training](#training) <br>
+🎛 [Models, datasets, demo](#models-datasets-demo) <br>
+⭐️ [Inference](#inference) <br>
+🧭 [Results](#results) <br>
+🤝 [Acknowledgements](#acknowledgements) <br>
 
 ## Motivation 
 
