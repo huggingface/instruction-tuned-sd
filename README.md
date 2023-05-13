@@ -273,4 +273,16 @@ Refer to our [blog post](https://hf.co/blog/instruction-tuning-sd) for more disc
 
 Thanks to [Alara Dirik](https://www.linkedin.com/in/alaradirik/) and [Zhengzhong Tu](https://www.linkedin.com/in/zhengzhongtu) for the helpful discussions. 
 
+## Citation
+
+```bibtex
+@article{
+  Paul2023instruction-tuning-sd,
+  author = {Paul, Sayak},
+  title = {Instruction-tuning Stable Diffusion with InstructPix2Pix},
+  journal = {Hugging Face Blog},
+  year = {2023},
+  note = {https://huggingface.co/blog/instruction-tuning-sd},
+}
+```
 
