@@ -236,6 +236,10 @@ image = pipeline("derain the image", image=image).images[0]
 image.save("image.png")
 ```
 
+
+> 💡 **Note**: Since the above pipelines are essentially of type `StableDiffusionInstructPix2PixPipeline`, you can customize several arguments that
+the pipeline exposes. Refer to the [official docs](https://huggingface.co/docs/diffusers/main/en/api/pipelines/stable_diffusion/pix2pix) for more details.
+
 ## Results
 
 ### Cartoonization
