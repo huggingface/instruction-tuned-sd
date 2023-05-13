@@ -194,7 +194,7 @@ accelerate launch --mixed_precision="fp16" finetune_instruct_pix2pix.py \
 
 ### Demo on 🤗 Spaces
 
-Try out the models interactively WITHOUT any setup: Coming soon!
+Try out the models interactively WITHOUT any setup: [Demo](https://huggingface.co/spaces/instruction-tuning-sd/instruction-tuned-sd)
 
 ## Inference
 
