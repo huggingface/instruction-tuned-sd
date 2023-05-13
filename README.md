@@ -2,7 +2,7 @@
 
 **TL;DR**: Motivated partly by [FLAN](https://arxiv.org/abs/2109.01652) and partly by [InstructPix2Pix](https://arxiv.org/abs/2211.09800), we explore a way to instruction-tune [Stable Diffusion](https://stability.ai/blog/stable-diffusion-public-release). This allows us to prompt our model using an input image and an “instruction”, such as - *Apply a cartoon filter to the natural image*.
 
-You can check out [our blog post] (TODO) to know more details. 
+You can read [our blog post](https://hf.co/blog/instruction-tuning-sd) to know more details. 
 
 ## Table of contents
 
@@ -262,7 +262,7 @@ image.save("image.png")
 <img src="https://i.imgur.com/uhTqIpY.png"/>
 </p>
 
-Refer to our [blog post] (TODO) for more discussions on results and open questions.  
+Refer to our [blog post](https://hf.co/blog/instruction-tuning-sd) for more discussions on results and open questions.  
 
 
 ## Acknowledgements
