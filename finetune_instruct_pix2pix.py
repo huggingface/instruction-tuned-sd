@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Script to fine-tune InstructPix2Pix for Whitebox Cartoonization."""
+"""Script to fine-tune InstructPix2Pix."""
 
 import argparse
 import logging
