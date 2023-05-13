@@ -26,7 +26,7 @@ Our motivation behind this work comes partly from the FLAN line of works and par
 <img src="https://huggingface.co/datasets/sayakpaul/sample-datasets/resolve/main/instruction-tuning-sd.png" width=600/>
 </p>
 
-Our main idea is to first create an instruction prompted dataset (as described in [our blog] (TODO) and then conduct InstructPix2Pix style training. The end objective is to make Stable Diffusion better at following specific instructions that entail image transformation related operations.
+Our main idea is to first create an instruction prompted dataset (as described in [our blog](https://hf.co/blog/instruction-tuning-sd) and then conduct InstructPix2Pix style training. The end objective is to make Stable Diffusion better at following specific instructions that entail image transformation related operations.
 
 
 ## Data preparation
