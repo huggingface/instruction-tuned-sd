@@ -253,13 +253,13 @@ image.save("image.png")
 ### Low-level image processing
 
 <p align="center">
-<img src="https://i.imgur.com/XBkOBaX.png"/>
+<img src="https://i.imgur.com/LOhcJLv.jpg"/>
 </p>
 
 ---
 
 <p align="center">
-<img src="https://i.imgur.com/lNR7mOD.png"/>
+<img src="https://i.imgur.com/uhTqIpY.png"/>
 </p>
 
 Refer to our [blog post] (TODO) for more discussions on results and open questions.  
