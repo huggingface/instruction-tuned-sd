@@ -27,7 +27,7 @@ import tensorflow as tf
 from huggingface_hub import snapshot_download
 from PIL import Image
 
-from . import image_utils
+import image_utils
 
 
 def load_model(model_id="sayakpaul/whitebox-cartoonizer"):

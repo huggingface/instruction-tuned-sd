@@ -5,3 +5,4 @@ huggingface_hub
 numpy
 Pillow
 opencv-python
+protobuf==3.20.*
