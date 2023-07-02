@@ -441,6 +441,12 @@ def download_image(url):
     image = image.convert("RGB")
     return image
 
+def open_image(image_path):
+    image = PIL.Image.open(image_path)
+    image = PIL.ImageOps.exif_transpose(image)
+    image = image.convert("RGB")
+    return image
+
 
 def main():
     args = parse_args()
@@ -1075,7 +1081,8 @@ def main():
                 pipeline.set_progress_bar_config(disable=True)
 
                 # run inference
-                original_image = download_image(args.val_image_url)
+                # original_image = download_image(args.val_image_url)
+                original_image = open_image(args.val_image_url)
                 edited_images = []
                 with torch.autocast(
                     str(accelerator.device),
