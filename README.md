@@ -47,7 +47,7 @@ We conducted our experiments with PyTorch 1.13.1 (CUDA 11.6) and a single A100 G
 Once PyTorch is installed, we can install the rest of the dependencies:
 
 ```bash 
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 Additionally, we recommend installing [xformers](https://github.com/facebookresearch/xformers) as well for enabling memory-efficient training.
