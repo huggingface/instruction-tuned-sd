@@ -155,8 +155,8 @@ accelerate launch --mixed_precision="fp16" train_instruct_pix2pix.py \
 
 ```bash 
 export MODEL_ID="timbrooks/instruct-pix2pix"
-export DATASET_ID="instruction-tuning-sd/cartoonization"
-export OUTPUT_DIR="cartoonization-finetuned"
+export DATASET_ID="instruction-tuning-sd/low-level-image-proc"
+export OUTPUT_DIR="low-level-img-proc-finetuned"
 
 accelerate launch --mixed_precision="fp16" finetune_instruct_pix2pix.py \
   --pretrained_model_name_or_path=$MODEL_ID \
