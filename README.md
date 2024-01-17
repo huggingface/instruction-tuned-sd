@@ -38,6 +38,9 @@ Our data preparation process is inspired by FLAN. Refer to the sections below fo
 
 ## Training
 
+> [!TIP]
+> In case of using custom datasets, one needs to configure the dataset as per their choice as long as you maintain the format presented here. You might have to configure your dataloader and dataset class in case you don't want to make use of the `datasets` library. If you do so, you might have to adjust the training scripts accordingly.
+
 ### Dev env setup
 
 We recommend using a Python virtual environment for this. Feel free to use your favorite one here. 
