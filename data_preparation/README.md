@@ -41,6 +41,9 @@ Then run:
 python export_to_hub.py
 ```
 
+> [!WARNING]
+> Please ensure that an empty [`DS_NAME` dataset](https://github.com/huggingface/instruction-tuned-sd/blob/0193a90d6932a2eac7a231ef5760fb427e44274d/data_preparation/export_to_hub.py#L26) was created on the Hub first. Instructions on how to do that are [here](https://huggingface.co/docs/datasets/upload_dataset#upload-with-the-hub-ui).
+
 You can find a mini dataset [here](https://huggingface.co/datasets/instruction-tuning-vision/cartoonizer-dataset):
 
 <p align="center">
